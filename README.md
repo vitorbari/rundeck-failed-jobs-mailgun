@@ -1,2 +1,3 @@
 # rundeck_failed_jobs
-Sends Rundeck failed jobs via email
+
+A tool that user Rundeck API to get failed jobs information and sends it via email using Mandrill API.

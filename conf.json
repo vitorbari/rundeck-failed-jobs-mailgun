@@ -1,0 +1,16 @@
+{
+	"RundeckServerUrl": "http://192.168.0.10:4440",
+	"RundeckApiVersion" : "13",
+	"RundeckAuthToken" : "",
+
+	"MandrillKey" : "",
+	"MandrillFromEmail" : "noreply@yourdomain.com",
+	"MandrillFromName" : "No-Reply",
+	"MandrillRecipients" : [
+		{
+			"Email": "example@example", 
+			"Name": "Your Name", 
+			"SendType": "to"
+		}
+	]
+}
