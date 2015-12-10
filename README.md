@@ -31,6 +31,26 @@ You should specify your RunDeck server, Mandrill Key and recipients for the noti
 $ ./rundeck-failed-jobs --project=<project name> [--group<group name>] [--recentfilter=<filter>]
 ```
 
+## Notification Example
+
+Title: `[RunDeck] [ACME] 5 failures!`
+
+Email Body:
+```
+2 Failed Executions from project [ACME].
+
+Executions:
+	ACME_SRV-APP05_PRD_UPDATE_STATUS
+		http://192.168.0.10:4440/execution/follow/175085
+		Started: 2015-12-06T18:00:00Z | User:vitor.bari
+		Nodes: srv-app05
+
+	ACME_SRV-APP05_PRD_CLEAR_LOGS
+		http://192.168.0.10:4440/execution/follow/175079
+		Started: 2015-12-06T17:55:00Z | User:vitor.bari
+		Nodes: srv-app05
+```
+
 ## Details
 
 For more information about RunDeck API, go to <http://rundeck.org/2.6.0/api/index.html>.
