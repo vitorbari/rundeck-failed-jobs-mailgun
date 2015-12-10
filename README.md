@@ -21,7 +21,8 @@ $ go build rundeck-failed-jobs.go
 ## Configuration
 
 Open `conf.json`. 
-You should specify your RunDeck server, Mandrill Key and recipients that will receive the notifications.
+
+You should specify your RunDeck server, Mandrill Key and recipients for the notifications.
 
 
 ## Usage
