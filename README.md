@@ -1,5 +1,7 @@
 # rundeck_failed_jobs
 
+[![Build Status](https://travis-ci.org/vitorbari/rundeck-failed-jobs.svg)](https://travis-ci.org/vitorbari/rundeck-failed-jobs)
+
 A tool that user Rundeck API to get failed jobs information and sends it via email using Mandrill API.
 
 ## Installation
