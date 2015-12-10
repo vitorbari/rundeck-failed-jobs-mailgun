@@ -33,7 +33,7 @@ $ ./rundeck-failed-jobs --project=<project name> [--group<group name>] [--recent
 
 ## Notification Example
 
-Title: `[RunDeck] [ACME] 5 failures!`
+Title: `[RunDeck] [ACME] 2 failures!`
 
 Email Body:
 ```
