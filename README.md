@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/vitorbari/rundeck-failed-jobs-mailgun.svg)](https://travis-ci.org/vitorbari/rundeck-failed-jobs-mailgun)
 
-A tool that uses Rundeck API to get failed jobs information and sends it via email using **Mandrill API**.
+A tool that uses Rundeck API to get failed jobs information and sends it via email using **Mailgun API**.
 
 ## Installation
 
@@ -22,7 +22,7 @@ $ go build rundeck-failed-jobs-mailgun.go
 
 Open `conf.json`. 
 
-You should specify your RunDeck server, Mandrill Key and recipients for the notifications.
+You should specify your RunDeck server, Mailgun Domains, Mailgun Keys and recipients for the notifications.
 
 
 ## Usage
@@ -55,4 +55,4 @@ Executions:
 
 For more information about RunDeck API, go to <http://rundeck.org/2.6.0/api/index.html>.
 
-Mandrill website <https://mandrillapp.com>.
+Mailgun website <https://mailgun.com/>.
