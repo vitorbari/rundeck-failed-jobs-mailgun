@@ -1,6 +1,6 @@
-# rundeck-failed-jobs
+# rundeck-failed-jobs-mailgun-mailgun
 
-[![Build Status](https://travis-ci.org/vitorbari/rundeck-failed-jobs.svg)](https://travis-ci.org/vitorbari/rundeck-failed-jobs)
+[![Build Status](https://travis-ci.org/vitorbari/rundeck-failed-jobs-mailgun.svg)](https://travis-ci.org/vitorbari/rundeck-failed-jobs-mailgun)
 
 A tool that uses Rundeck API to get failed jobs information and sends it via email using **Mandrill API**.
 
@@ -9,13 +9,13 @@ A tool that uses Rundeck API to get failed jobs information and sends it via ema
 Download source via:
 
 ```
-$ git clone https://github.com/vitorbari/rundeck-failed-jobs.git
+$ git clone https://github.com/vitorbari/rundeck-failed-jobs-mailgun.git
 ```
 
 You will need Go installed to build from source.
 
 ```
-$ go build rundeck-failed-jobs.go
+$ go build rundeck-failed-jobs-mailgun.go
 ```
 
 ## Configuration
@@ -28,7 +28,7 @@ You should specify your RunDeck server, Mandrill Key and recipients for the noti
 ## Usage
 
 ```
-$ ./rundeck-failed-jobs --project=<project name> [--group<group name>] [--recentfilter=<filter>]
+$ ./rundeck-failed-jobs-mailgun --project=<project name> [--group<group name>] [--recentfilter=<filter>]
 ```
 
 ## Notification Example
