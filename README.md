@@ -1,4 +1,4 @@
-# rundeck-failed-jobs-mailgun-mailgun
+# rundeck-failed-jobs-mailgun
 
 [![Build Status](https://travis-ci.org/vitorbari/rundeck-failed-jobs-mailgun.svg)](https://travis-ci.org/vitorbari/rundeck-failed-jobs-mailgun)
 
