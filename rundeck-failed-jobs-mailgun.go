@@ -80,6 +80,7 @@ func main() {
 	projectPtr := flag.String("project", "", "the project name")
 	groupPtr := flag.String("group", "", "specify a group or partial group path to include all jobs within that group path")
 	recentFilterPtr := flag.String("recentfilter", "1h", "Use a simple text format to filter executions that completed within a period of time")
+	max := flag.String("max", "20", "Indicate the maximum number of results to return. If max = 0, all results will be returned. Default = 20.")
 
 	flag.Parse()
 
@@ -100,7 +101,7 @@ func main() {
 
 	// Send get request to Rundeck api
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", configuration.RundeckServerUrl+"/api/"+configuration.RundeckApiVersion+"/executions?project="+*projectPtr+"&groupPath="+*groupPtr+"&statusFilter=failed&recentFilter="+*recentFilterPtr, nil)	
+	req, err := http.NewRequest("GET", configuration.RundeckServerUrl+"/api/"+configuration.RundeckApiVersion+"/executions?project="+*projectPtr+"&groupPath="+*groupPtr+"&statusFilter=failed&recentFilter="+*recentFilterPtr+"&max="+*max, nil)	
 	req.Header.Set("X-Rundeck-Auth-Token", configuration.RundeckAuthToken)
 	res, err := client.Do(req)
 
@@ -144,7 +145,11 @@ func main() {
 		for _,execution := range query.Executions {
 
 			for _,job := range execution.Jobs {
-				buffer.WriteString("\t" + job.Name + "\n")
+				if len(*groupPtr) > 0 {
+					buffer.WriteString("\t" + job.Name + "\n")
+				} else {
+					buffer.WriteString("\t" + job.Group + "/" + job.Name + "\n")
+				}
 			}
 
 			buffer.WriteString("\t\t" + execution.Href + "\n")
