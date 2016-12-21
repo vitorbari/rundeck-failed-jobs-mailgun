@@ -116,6 +116,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+	if res.StatusCode != 200 {
+		fmt.Printf("HTTP Status: %d - %s\n", res.StatusCode, http.StatusText(res.StatusCode))
+		fmt.Printf("Response: %s", response_body)
+		os.Exit(1)
+	}
+
 	var query QueryExecutions
 	xml.Unmarshal(response_body, &query)
 
